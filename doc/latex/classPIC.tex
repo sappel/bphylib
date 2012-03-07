@@ -1,0 +1,450 @@
+\section{PIC Class Reference}
+\label{classPIC}\index{PIC@{PIC}}
+\doxyref{Particle}{p.}{structParticle} container.  
+
+
+{\tt \#include $<$pic.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\textbf{PIC} (double macro, double q, double m, double len, int n)\label{classPIC_adb5e6fdbb47fa97b17aa5b794774669}
+
+\item 
+int \textbf{get\_\-size} ()\label{classPIC_d1bd46237afec99f7c0de61aec05b65b}
+
+\item 
+double \textbf{get\_\-macro} ()\label{classPIC_e1b92ccff08c9edcbeefa3c53e70287e}
+
+\item 
+double \textbf{set\_\-macro} (double macro)\label{classPIC_692b8d63a96ca657bcfb155c287bf4f5}
+
+\item 
+double \textbf{get\_\-m} ()\label{classPIC_ee01f0cf91916407ce75c86a0448c41d}
+
+\item 
+double \textbf{get\_\-q} ()\label{classPIC_78c0e1d860577164e9917118ca83b997}
+
+\item 
+double \textbf{get\_\-gamma} (int j)\label{classPIC_011202f3bedc77ef6fdb9bb224a29b25}
+
+\item 
+double \textbf{get\_\-vx} (int j)\label{classPIC_87f59482680ff11985aa29f54c3251ac}
+
+\item 
+double \textbf{get\_\-vy} (int j)\label{classPIC_c069d637e0ef1b476725f0e10398380f}
+
+\item 
+double \textbf{get\_\-vz} (int j)\label{classPIC_6360bd0477f048ff380d5f3ea7741cb6}
+
+\item 
+double {\bf get\_\-energy} (int j)\label{classPIC_085d3f5f08fb45269cc8a1b738d9de00}
+
+\begin{CompactList}\small\item\em kinetic energy in eV \item\end{CompactList}\item 
+double \textbf{get\_\-x} (int j)\label{classPIC_078b923c632faef2f9f7bd3797959414}
+
+\item 
+double \textbf{get\_\-y} (int j)\label{classPIC_5f694f5efb8d989fd49bb92b7cc1188e}
+
+\item 
+double \textbf{get\_\-z} (int j)\label{classPIC_d50e99e0837c606398370e650653c940}
+
+\item 
+void \textbf{set\_\-const\_\-density\_\-xy} (double boundary, double T0, long $\ast$d1)\label{classPIC_9a99541733336d149b1407c67c092378}
+
+\item 
+void {\bf inject\_\-beam} (double boundary, double vel, double angle, double ndensity, double Tempxy, double Tempz, double dt, long $\ast$d1)
+\item 
+void {\bf shift\_\-xyz} (double dt, double boundary)
+\item 
+double {\bf shift\_\-xyz} (double dt, double boundary, double delta\_\-max, double Emax, double E0, long $\ast$d1)
+\item 
+void \textbf{shift\_\-uxy} ({\bf Grid2D} \&pot, double dt)\label{classPIC_f8f9f504a2046409fc8756cab1653528}
+
+\item 
+void \textbf{shift\_\-urz} (Grid2D\_\-rz \&pot, double dt)\label{classPIC_ef6019e2d466a06112b65beaa24b9129}
+
+\item 
+void {\bf Boris\_\-uxy} (double By, double dt)
+\item 
+void {\bf Boris\_\-uxy} ({\bf Grid2D} \&Bx, {\bf Grid2D} \&By, double dt)
+\item 
+void {\bf Boris\_\-urz} (Grid2D\_\-rz \&Br, Grid2D\_\-rz \&Bz, double dt)
+\item 
+void \textbf{get\_\-potential\_\-xy} ({\bf Grid2D} \&pote, {\bf Grid2D} \&rhoe, Greenfb \&gf)\label{classPIC_b00af391d1bd0dc7f032ae6a17d3bc38}
+
+\item 
+void \textbf{get\_\-potential\_\-rz} (Grid2D\_\-rz \&pote, Grid2D\_\-rz \&rhoe)\label{classPIC_09c04eae0da089b390fdf817883582b6}
+
+\item 
+void \textbf{densityXY} ({\bf Grid2D} \&target)\label{classPIC_89f092d5a6b3eede4fc23f09d441cacf}
+
+\item 
+void \textbf{densityRZ} (Grid2D\_\-rz \&target)\label{classPIC_0f7f3dd6d62e3c0035fdddc9aa201c63}
+
+\item 
+double \textbf{Tx\_\-rms} ()\label{classPIC_3ebd0467ee2dad2f2470407c8e4f2d21}
+
+\item 
+double \textbf{vth\_\-xy} ()\label{classPIC_09b7e045d6c8550a2ec2dbe6f9457527}
+
+\item 
+double \textbf{x\_\-rms} ()\label{classPIC_c2fc2092eccca66f2952f695e485fc6b}
+
+\item 
+double \textbf{offset\_\-x} ()\label{classPIC_d2626159532193029b2ab0fa754f3f01}
+
+\item 
+double \textbf{offset\_\-y} ()\label{classPIC_b2a40f975249f0a83cd521a60705c8f8}
+
+\item 
+double \textbf{total\_\-charge} ()\label{classPIC_723bc3559cf15bb0638fab9c453b5dde}
+
+\item 
+double \textbf{total\_\-kinetic\_\-energy} ()\label{classPIC_6f38522b145b9f16bb451352b72dd287}
+
+\item 
+double \textbf{total\_\-energy} ({\bf Grid2D} \&pot)\label{classPIC_eb2c3ae81ea72c37159f39434bf0b202}
+
+\item 
+int \textbf{reflection} (double energy, double E0, long $\ast$d)\label{classPIC_14288313fc816bffcc7ecd94cba8a735}
+
+\item 
+int \textbf{secondary} (double energy, double delta\_\-max, double Emax, long $\ast$d)\label{classPIC_f8a4fef9f404ea34d1ebe91751500597}
+
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+vector$<$ {\bf Particle} $>$ \textbf{part}\label{classPIC_8939fec31c7e6e6806dbfc74e41e9317}
+
+\item 
+double {\bf macroN}\label{classPIC_300c02241819293ec5184bf4aa2ae2c9}
+
+\begin{CompactList}\small\item\em number of physical particles per macro particle \item\end{CompactList}\item 
+double \textbf{charge\_\-p}\label{classPIC_ea1d15fedb91fab437f53cde03f9ae4a}
+
+\item 
+double {\bf mass\_\-p}\label{classPIC_99e18e7f4ab625cdd446b5b2f9e2e56a}
+
+\begin{CompactList}\small\item\em particle charge and charge numbers \item\end{CompactList}\item 
+double {\bf length}\label{classPIC_55fc160bed52250126a334a3e4b93087}
+
+\begin{CompactList}\small\item\em length of the missing dimension; \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Particle}{p.}{structParticle} container. 
+
+Definition at line 12 of file pic.h.
+
+\subsection{Member Function Documentation}
+\index{PIC@{PIC}!inject\_\-beam@{inject\_\-beam}}
+\index{inject\_\-beam@{inject\_\-beam}!PIC@{PIC}}
+\subsubsection[inject\_\-beam]{\setlength{\rightskip}{0pt plus 5cm}void PIC::inject\_\-beam (double {\em boundary}, \/  double {\em vel}, \/  double {\em angle}, \/  double {\em ndensity}, \/  double {\em Tempxy}, \/  double {\em Tempz}, \/  double {\em dt}, \/  long $\ast$ {\em d1})}\label{classPIC_db899bb391128b96632d4a2aa326b41a}
+
+
+inject beam 
+
+Definition at line 40 of file pic.cpp.
+
+References length, macroN, mass\_\-p, Particle::ux, Particle::uy, Particle::uz, Particle::x, Particle::y, and Particle::z.
+
+\begin{Code}\begin{verbatim}41 {
+42  double Ninj=vel*ndensity*PI*pow(boundary,2)*dt/macroN; 
+43  double gamma=1.0/sqrt(1.0-pow(vel/clight,2));
+44  double utherm=clight*sqrt(pow(charge_p*Tempxy/(mass_p*clight*clight)+1.0,2)-1.0);
+45  double r_amp, phase;
+46  double u, v, w;
+47  for(int j=0; j<Ninj; j++) 
+48    { 
+49         Particle part_inj;
+50         r_amp=boundary*sqrt(ran1(d1));
+51         phase=2.0*PI*ran1(d1);  
+52         part_inj.x=r_amp*cos(phase);
+53         part_inj.y=r_amp*sin(phase);
+54         part_inj.z=-0.5*length;
+55         
+56         do { u = 2.0 * ran1(d1) - 1.0 ;  
+57              v = 2.0 * ran1(d1) - 1.0 ;              
+58              w = u*u + v*v ; }
+59              while (w >= 1.0) ;
+60         
+61         part_inj.ux = part_inj.x/r_amp*vel*angle + utherm * u * sqrt(-2.0*log(w)/w) ;
+62         part_inj.uy = part_inj.y/r_amp*vel*angle + utherm * v * sqrt(-2.0*log(w)/w) ;
+63         part_inj.uz = gamma*vel;
+64     part.push_back(part_inj);
+65    }    
+66 }
+\end{verbatim}
+\end{Code}
+
+
+\index{PIC@{PIC}!shift\_\-xyz@{shift\_\-xyz}}
+\index{shift\_\-xyz@{shift\_\-xyz}!PIC@{PIC}}
+\subsubsection[shift\_\-xyz]{\setlength{\rightskip}{0pt plus 5cm}void PIC::shift\_\-xyz (double {\em dt}, \/  double {\em boundary})}\label{classPIC_68c4a3a93540efd76ceb2ae18412b585}
+
+
+coordinate shift with absorbing boundary 
+
+Definition at line 104 of file pic.cpp.
+
+References length.
+
+\begin{Code}\begin{verbatim}105 {
+106   long j;
+107   double gamma, u2;
+108   for(j=0; j<part.size(); j++)
+109    {
+110         u2=pow(part[j].uy,2)+pow(part[j].ux,2)+pow(part[j].uz,2);
+111         gamma=sqrt(1.0+u2/pow(clight,2));
+112         part[j].x+=part[j].ux*dt/gamma;
+113         part[j].y+=part[j].uy*dt/gamma; 
+114         part[j].z+=part[j].uz*dt/gamma;
+115         if ( sqrt(pow(part[j].x,2)+pow(part[j].y,2)) > boundary || part[j].z > 0.5*length || part[j].z < -0.5*length )
+116           part.erase(part.begin()+j);
+117           
+118    }
+119 }
+\end{verbatim}
+\end{Code}
+
+
+\index{PIC@{PIC}!shift\_\-xyz@{shift\_\-xyz}}
+\index{shift\_\-xyz@{shift\_\-xyz}!PIC@{PIC}}
+\subsubsection[shift\_\-xyz]{\setlength{\rightskip}{0pt plus 5cm}double PIC::shift\_\-xyz (double {\em dt}, \/  double {\em boundary}, \/  double {\em delta\_\-max}, \/  double {\em Emax}, \/  double {\em E0}, \/  long $\ast$ {\em d1})}\label{classPIC_fb7a48b9a158a2d95f924678240a6fb6}
+
+
+coordinate shift with SEY at boundary 
+
+Definition at line 125 of file pic.cpp.
+
+References get\_\-energy(), macroN, mass\_\-p, Particle::ux, Particle::uy, Particle::uz, Particle::x, Particle::y, and Particle::z.
+
+\begin{Code}\begin{verbatim}126 {
+127   long j;
+128   int ref=0, sec=0;
+129   double gamma, u2, r2;
+130   double T0=2.0, phi_emit=0.0, energy=0.0;
+131   double ut=clight*sqrt(pow(fabs(charge_p)*T0/(mass_p*clight*clight)+1.0,2)-1.0);
+132   vector<Particle> part_new; 
+133   for(j=0; j<part.size(); j++)
+134    {
+135         u2=pow(part[j].uy,2)+pow(part[j].ux,2)+pow(part[j].uz,2);
+136         gamma=sqrt(1.0+u2/pow(clight,2));
+137         part[j].x+=part[j].ux*dt/gamma;
+138         part[j].y+=part[j].uy*dt/gamma;
+139     r2=pow(part[j].y,2)+pow(part[j].x,2);
+140         if ( sqrt(r2) > boundary ) 
+141           {
+142            ref=reflection(get_energy(j),E0,d1);
+143            if (delta_max > 0.0) sec=secondary(get_energy(j),delta_max,Emax,d1); 
+144            if ( ref == 1)
+145                 { 
+146                      //phi_emit=0.5*PI*(2.0*ran1(d1)-1.0);
+147                          //part[j].ux=-ut*(cos(phi_emit)*part[j].x/sqrt(r2)-sin(phi_emit)*part[j].y/sqrt(r2));
+148                          //part[j].uy=-ut*(sin(phi_emit)*part[j].y/sqrt(r2)+cos(phi_emit)*part[j].y/sqrt(r2));
+149                      part[j].ux=-part[j].ux;
+150                      part[j].uy=-part[j].uy;
+151                      part[j].x=0.99*boundary*part[j].x/sqrt(r2);  
+152                          part[j].y=0.99*boundary*part[j].y/sqrt(r2);
+153                     } 
+154            else { 
+155                      if (sec == 0) 
+156                        {        
+157                                 energy+=get_energy(j);
+158                         part.erase(part.begin()+j);
+159                        }
+160                  else if (sec == 1)
+161                   { 
+162                        energy+=get_energy(j);
+163                            phi_emit=0.1*PI*(2.0*ran1(d1)-1.0);
+164                            part[j].ux=-ut*(cos(phi_emit)*part[j].x/sqrt(r2)-sin(phi_emit)*part[j].y/sqrt(r2));
+165                            part[j].uy=-ut*(sin(phi_emit)*part[j].y/sqrt(r2)+cos(phi_emit)*part[j].y/sqrt(r2));
+166                        part[j].x=0.99*boundary*part[j].x/sqrt(r2);  
+167                            part[j].y=0.99*boundary*part[j].y/sqrt(r2);  
+168                       }
+169                  else if (sec == 2)
+170                   { 
+171                        energy+=get_energy(j);
+172                        Particle part_inj;
+173                        phi_emit=0.1*PI*(2.0*ran1(d1)-1.0);
+174                        part[j].ux=-ut*(cos(phi_emit)*part[j].x/sqrt(r2)-sin(phi_emit)*part[j].y/sqrt(r2));
+175                        part[j].uy=-ut*(sin(phi_emit)*part[j].y/sqrt(r2)+cos(phi_emit)*part[j].y/sqrt(r2));
+176                        phi_emit=0.1*PI*(2.0*ran1(d1)-1.0);
+177                        part_inj.ux = -ut*(cos(phi_emit)*part[j].x/sqrt(r2)-sin(phi_emit)*part[j].y/sqrt(r2));
+178                            part_inj.uy = -ut*(sin(phi_emit)*part[j].y/sqrt(r2)+cos(phi_emit)*part[j].y/sqrt(r2));
+179                        part_inj.uz = 0.0;
+180                        part[j].x=0.99*boundary*part[j].x/sqrt(r2);  
+181                            part[j].y=0.99*boundary*part[j].y/sqrt(r2);  
+182                        part_inj.x = part[j].x;
+183                            part_inj.y = part[j].y; 
+184                            part_inj.z = part[j].z;
+185                            part_new.push_back(part_inj);
+186                      }
+187                     else if (sec == 3)
+188                  { 
+189                        energy+=get_energy(j);
+190                            Particle part_inj, part_inj_2;
+191                            phi_emit=0.1*PI*(2.0*ran1(d1)-1.0);
+192                        part[j].ux=-ut*(cos(phi_emit)*part[j].x/sqrt(r2)-sin(phi_emit)*part[j].y/sqrt(r2));
+193                        part[j].uy=-ut*(sin(phi_emit)*part[j].y/sqrt(r2)+cos(phi_emit)*part[j].y/sqrt(r2));
+194                        phi_emit=0.1*PI*(2.0*ran1(d1)-1.0);
+195                        part_inj.ux = -ut*(cos(phi_emit)*part[j].x/sqrt(r2)-sin(phi_emit)*part[j].y/sqrt(r2));
+196                            part_inj.uy = -ut*(sin(phi_emit)*part[j].y/sqrt(r2)+cos(phi_emit)*part[j].y/sqrt(r2));
+197                        part_inj.uz = 0.0;
+198                        phi_emit=0.1*PI*(2.0*ran1(d1)-1.0);
+199                            part_inj_2.ux = -ut*(cos(phi_emit)*part[j].x/sqrt(r2)-sin(phi_emit)*part[j].y/sqrt(r2));
+200                            part_inj_2.uy = -ut*(sin(phi_emit)*part[j].y/sqrt(r2)+cos(phi_emit)*part[j].y/sqrt(r2));
+201                        part_inj_2.uz = 0.0;
+202                        part[j].x=0.99*boundary*part[j].x/sqrt(r2);  
+203                            part[j].y=0.99*boundary*part[j].y/sqrt(r2);  
+204                        part_inj.x = part[j].x;
+205                            part_inj.y = part[j].y; 
+206                            part_inj.z = part[j].z;
+207                            part_inj_2.x = part[j].x;
+208                            part_inj_2.y = part[j].y; 
+209                            part_inj_2.z = part[j].z;
+210                            part_new.push_back(part_inj);
+211                            part_new.push_back(part_inj_2);
+212                      }
+213                         else {cout << "shift_xyz: n>4" << endl; exit(0);}
+214                     }
+215           }     
+216    }
+217    for(j=0; j<part_new.size(); j++)
+218             part.push_back(part_new[j]);
+219         return macroN*energy;
+220 }
+\end{verbatim}
+\end{Code}
+
+
+\index{PIC@{PIC}!Boris\_\-uxy@{Boris\_\-uxy}}
+\index{Boris\_\-uxy@{Boris\_\-uxy}!PIC@{PIC}}
+\subsubsection[Boris\_\-uxy]{\setlength{\rightskip}{0pt plus 5cm}void PIC::Boris\_\-uxy (double {\em By}, \/  double {\em dt})}\label{classPIC_4156f1201462b4aa06aaa4c85d8a3dd5}
+
+
+Boris particle updater for a pure dipole B-field in y-direction. The push is done in 3D cartesian coordinates. 
+
+Definition at line 296 of file pic.cpp.
+
+References mass\_\-p.
+
+\begin{Code}\begin{verbatim}297 {
+298  long j;        
+299  double ty, tabs2, u2, gamma, ux0, uy0, uz0;    
+300  for(j=0; j<part.size(); j++)
+301    { 
+302         u2=pow(part[j].uy,2)+pow(part[j].ux,2)+pow(part[j].uz,2);
+303         gamma=sqrt(1.0+u2/pow(clight,2));
+304         ux0=part[j].ux;uy0=part[j].uy;uz0=part[j].uz;
+305         ty=By/fabs(By)*tan(charge_p*dt*fabs(By)/(2.0*gamma*mass_p));
+306         
+307         tabs2=pow(ty,2); 
+308         
+309         part[j].ux+=-part[j].uz*ty;
+310     part[j].uz+=part[j].ux*ty;
+311         
+312         part[j].ux=ux0-part[j].uz*ty*2.0/(1.0+tabs2);
+313     part[j].uz=uz0+part[j].ux*ty*2.0/(1.0+tabs2);
+314    }
+315 }
+\end{verbatim}
+\end{Code}
+
+
+\index{PIC@{PIC}!Boris\_\-uxy@{Boris\_\-uxy}}
+\index{Boris\_\-uxy@{Boris\_\-uxy}!PIC@{PIC}}
+\subsubsection[Boris\_\-uxy]{\setlength{\rightskip}{0pt plus 5cm}void PIC::Boris\_\-uxy ({\bf Grid2D} \& {\em Bx}, \/  {\bf Grid2D} \& {\em By}, \/  double {\em dt})}\label{classPIC_82d00e6b66c67491365a66199fe13f8e}
+
+
+Boris particle updater for a B-field in x,y. The push is done in 3D cartesian coordinates. 
+
+Definition at line 261 of file pic.cpp.
+
+References Grid2D::Grid2PIC(), and mass\_\-p.
+
+\begin{Code}\begin{verbatim}262 {
+263  long j;        
+264  double tx, ty, tabs2, Bxj, Byj, Babs, u2, gamma, ux0, uy0, uz0;        
+265  for(j=0; j<part.size(); j++)
+266    { 
+267     Bxj=Bx.Grid2PIC(part[j].x,part[j].y);
+268         Byj=By.Grid2PIC(part[j].x,part[j].y); 
+269         Babs=sqrt(pow(Bxj,2)+pow(Byj,2));
+270         u2=pow(part[j].uy,2)+pow(part[j].ux,2)+pow(part[j].uz,2);
+271         gamma=sqrt(1.0+u2/pow(clight,2));
+272         ux0=part[j].ux;uy0=part[j].uy;uz0=part[j].uz;
+273         if (Babs > 0.0) {
+274                 tx=Bxj/Babs*tan(charge_p*dt*Babs/(2.0*gamma*mass_p));
+275                 ty=Byj/Babs*tan(charge_p*dt*Babs/(2.0*gamma*mass_p)); }
+276         else {tx=0.0; ty=0.0;}
+277         
+278         tabs2=pow(tx,2)+pow(ty,2); 
+279         
+280         part[j].ux+=-part[j].uz*ty;
+281         part[j].uy+=part[j].uz*tx;
+282     part[j].uz+=part[j].ux*ty-part[j].uy*tx;
+283         
+284         part[j].ux=ux0-part[j].uz*ty*2.0/(1.0+tabs2);
+285         part[j].uy=uy0+part[j].uz*tx*2.0/(1.0+tabs2);
+286     part[j].uz=uz0+part[j].ux*ty*2.0/(1.0+tabs2)-part[j].uy*tx*2.0/(1.0+tabs2);
+287    }
+288 }
+\end{verbatim}
+\end{Code}
+
+
+\index{PIC@{PIC}!Boris\_\-urz@{Boris\_\-urz}}
+\index{Boris\_\-urz@{Boris\_\-urz}!PIC@{PIC}}
+\subsubsection[Boris\_\-urz]{\setlength{\rightskip}{0pt plus 5cm}void PIC::Boris\_\-urz (Grid2D\_\-rz \& {\em Br}, \/  Grid2D\_\-rz \& {\em Bz}, \/  double {\em dt})}\label{classPIC_40784574a094f98cbd95fd3729f1ca3b}
+
+
+Boris particle updater for a B-field given in cylindrical coordinates. The push is done in 3D cartesian coordinates. 
+
+Definition at line 322 of file pic.cpp.
+
+References mass\_\-p.
+
+\begin{Code}\begin{verbatim}323 {
+324  long j;        
+325  double tx, ty, tz, tabs2, Bxj, Byj, Bzj, Babs, u2, gamma, ux0, uy0, uz0, rpart;        
+326  for(j=0; j<part.size(); j++)
+327    { 
+328         rpart=sqrt(pow(part[j].x,2)+pow(part[j].y,2));
+329     Bxj=part[j].x/rpart*Br.Grid2PIC(rpart,part[j].z);
+330         Byj=part[j].y/rpart*Br.Grid2PIC(rpart,part[j].z);
+331         Bzj=Bz.Grid2PIC(rpart,part[j].z);
+332         Babs=sqrt(pow(Bxj,2)+pow(Byj,2)+pow(Bzj,2));
+333         u2=pow(part[j].uy,2)+pow(part[j].ux,2)+pow(part[j].uz,2);
+334         gamma=sqrt(1.0+u2/pow(clight,2));
+335         ux0=part[j].ux;uy0=part[j].uy;uz0=part[j].uz;
+336         if (Babs > 0.0) {
+337                 tx=Bxj/Babs*tan(charge_p*dt*Babs/(2.0*gamma*mass_p));
+338                 ty=Byj/Babs*tan(charge_p*dt*Babs/(2.0*gamma*mass_p)); 
+339                 tz=Bzj/Babs*tan(charge_p*dt*Babs/(2.0*gamma*mass_p)); 
+340                 }
+341         else {tx=0.0; ty=0.0; tz=0.0;}
+342         
+343         tabs2=pow(tx,2)+pow(ty,2); 
+344         
+345         part[j].ux+=part[j].uy*tz-part[j].uz*ty;
+346         part[j].uy+=part[j].uz*tx-part[j].ux*tz;
+347     part[j].uz+=part[j].ux*ty-part[j].uy*tx;
+348         
+349         part[j].ux=ux0+(part[j].uy*tz-part[j].uz*ty)*2.0/(1.0+tabs2);
+350         part[j].uy=uy0+(part[j].uz*tx-part[j].ux*tz)*2.0/(1.0+tabs2);
+351     part[j].uz=uz0+(part[j].ux*ty-part[j].uy*tx)*2.0/(1.0+tabs2);
+352    }
+353 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+pic.h\item 
+pic.cpp\end{CompactItemize}

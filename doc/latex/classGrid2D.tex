@@ -1,0 +1,134 @@
+\section{Grid2D Class Reference}
+\label{classGrid2D}\index{Grid2D@{Grid2D}}
+{\tt \#include $<$Grid.h$>$}
+
+Inherited by Grid2D\_\-rz.
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\textbf{Grid2D} (int dimx, int dimy, double diffx, double diffy)\label{classGrid2D_c8f50a129d82c3ccf640531f7a1402e4}
+
+\item 
+\textbf{Grid2D} (int dimx, int dimy, double diffx, double diffy, double begx, double begy)\label{classGrid2D_91a099b3f2374723c2e970b81ec0e6b2}
+
+\item 
+\textbf{Grid2D} (int dimx, int dimy, double diffx, double diffy, string filename)\label{classGrid2D_3f81068cc42e8ddeaf6b8f63d241287d}
+
+\item 
+\textbf{Grid2D} (const {\bf Grid2D} \&g)\label{classGrid2D_2b810795d2ccfcd672b49d2f0d78fd43}
+
+\item 
+{\bf Grid2D} \& \textbf{operator=} (const {\bf Grid2D} \&g)\label{classGrid2D_27f6ae6450c6b7fa391a0a12afcb9004}
+
+\item 
+double $\ast$ \textbf{get\_\-grid} ()\label{classGrid2D_7bc470c504c8a38ce5dd9c08fe3fd229}
+
+\item 
+int \textbf{get\_\-size} ()\label{classGrid2D_5ccec690bfb0db4f1dd24b55f84b2d84}
+
+\item 
+int \textbf{get\_\-NX} ()\label{classGrid2D_96d277b7838f0e6bc62a8b5f441361af}
+
+\item 
+int \textbf{get\_\-NY} ()\label{classGrid2D_57d33e575f5eaae1506d636081461fe1}
+
+\item 
+double \textbf{get\_\-dx} ()\label{classGrid2D_b8ff7986472232cbea6fe08a64c3d09c}
+
+\item 
+double \textbf{get\_\-dy} ()\label{classGrid2D_ef6dd0ca6c86bfd7f8843d96438c0380}
+
+\item 
+double \textbf{get\_\-beginx} ()\label{classGrid2D_21f925ceb3b1534193592951af481635}
+
+\item 
+double \textbf{get\_\-beginy} ()\label{classGrid2D_2616c46a9b0ccd8898364737265ec54b}
+
+\item 
+double \& \textbf{operator()} (int j, int l)\label{classGrid2D_1e7c77df1c18bd62d61277848ba7dff3}
+
+\item 
+double \& \textbf{operator[$\,$]} (int j)\label{classGrid2D_b626df8344a3e51460d535b442c06122}
+
+\item 
+{\bf Grid2D} \& \textbf{operator+=} (const {\bf Grid2D} \&g)\label{classGrid2D_a575dbaa5cec5a50f73dc13a3693c3e3}
+
+\item 
+{\bf Grid2D} \& \textbf{operator-=} (const {\bf Grid2D} \&g)\label{classGrid2D_04cb3d182ab9fe4ee9a99cb25f370043}
+
+\item 
+{\bf Grid2D} \& \textbf{operator-=} (double a)\label{classGrid2D_82eda33cede455d49c4a9f00608d2e11}
+
+\item 
+{\bf Grid2D} \& \textbf{operator$\ast$=} (double a)\label{classGrid2D_17cdca9b6e9c5e7a35e6a801738aaa51}
+
+\item 
+void \textbf{reset} ()\label{classGrid2D_eca16ff1b2a1483a5ceda85a960a599b}
+
+\item 
+void \textbf{filtering} ()\label{classGrid2D_b0dd970b4274c81c20b25b9b1f1e6799}
+
+\item 
+double \textbf{Grid2dx} (double pic\_\-pos\_\-x, double pic\_\-pos\_\-y)\label{classGrid2D_42403948a13f929a006ee470fd7f11fd}
+
+\item 
+double \textbf{Grid2dy} (double pic\_\-pos\_\-x, double pic\_\-pos\_\-y)\label{classGrid2D_a9ef20266e46cec1356e7dac91620ab9}
+
+\item 
+void \textbf{Pic2Grid} (double pic\_\-quantity, double pic\_\-pos\_\-x, double pic\_\-pos\_\-y)\label{classGrid2D_69bb55b70f599f1ee4b5ae122728225b}
+
+\item 
+double \textbf{Grid2PIC} (double pic\_\-pos\_\-x, double pic\_\-pos\_\-y)\label{classGrid2D_c25cb1c58d630125856499c665c0a596}
+
+\item 
+void \textbf{regrid} (double diffy, double begy)\label{classGrid2D_b1bee47268d4717f751b8b4fdd606d91}
+
+\item 
+void \textbf{print} ()\label{classGrid2D_2b90afc26a9f3079ff8190e7545143da}
+
+\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+vektor \textbf{x}\label{classGrid2D_7511fef0d8ef6c39b16f01d58d29e1cb}
+
+\item 
+vektor \textbf{y}\label{classGrid2D_722b206cdc81f2fed51edb93be1dc24e}
+
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+int \textbf{NX}\label{classGrid2D_b1d375ebe2bb129ecbb32d7d80408ccc}
+
+\item 
+int \textbf{NY}\label{classGrid2D_0296e65e4e2696e649bed4803faca68e}
+
+\item 
+double \textbf{dx}\label{classGrid2D_9a2e74bbae436906561c0282e9e548a2}
+
+\item 
+double \textbf{dy}\label{classGrid2D_a1dba327f43093270faa90dfa10c0833}
+
+\item 
+double \textbf{beginx}\label{classGrid2D_12dbaffdd5d3f211c1092c298eea9795}
+
+\item 
+double \textbf{beginy}\label{classGrid2D_3b5ef8880c7e5fb19e3a624b8b2d82bc}
+
+\item 
+double \textbf{boundary}\label{classGrid2D_67b121e11b11f5f8247682801df1f013}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Two dimensional grid with periodic boundary conditions and interpolation routines (linear) for \doxyref{PIC}{p.}{classPIC} codes 
+
+Definition at line 51 of file Grid.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Grid.h\item 
+Grid.cpp\end{CompactItemize}

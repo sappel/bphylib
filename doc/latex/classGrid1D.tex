@@ -1,0 +1,93 @@
+\section{Grid1D Class Reference}
+\label{classGrid1D}\index{Grid1D@{Grid1D}}
+{\tt \#include $<$Grid.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\textbf{Grid1D} (int n, double diff, double beg)\label{classGrid1D_ac928469788dc47070a4619754b6d03f}
+
+\item 
+\textbf{Grid1D} (int n, double diff, double beg, string filename)\label{classGrid1D_240766fc1965c1c30751b1f51269ae49}
+
+\item 
+{\bf Grid1D} \& \textbf{operator=} (const {\bf Grid1D} \&g)\label{classGrid1D_27a002b29558090a25b9936db3097eac}
+
+\item 
+double \& \textbf{operator[$\,$]} (int j)\label{classGrid1D_579f88bdd2f3d699ebbacbf70b09ed8d}
+
+\item 
+{\bf Grid1D} \& {\bf operator$\ast$=} (double a)\label{classGrid1D_bb0253f81fdde7b15646e538a676de0e}
+
+\begin{CompactList}\small\item\em multiplication with double: \item\end{CompactList}\item 
+{\bf Grid1D} \& \textbf{operator+=} ({\bf Grid1D} \&g)\label{classGrid1D_a8271c6f907fc385ddf8dcf85864395c}
+
+\item 
+void \textbf{set\_\-grid} (int j, double a)\label{classGrid1D_94d320fe0990a8b0e07defc6224e0ba2}
+
+\item 
+double \textbf{get\_\-grid} (int j)\label{classGrid1D_f7b6a8dfb561695eade663eee9c29742}
+
+\item 
+double $\ast$ \textbf{get\_\-grid} ()\label{classGrid1D_a7b5f54a1751b6fd6e0cb851381a82e0}
+
+\item 
+double \textbf{get\_\-grid\_\-lin} (double z0)\label{classGrid1D_6f468414aedc42cfe780d1d8128eb6a3}
+
+\item 
+double \textbf{get\_\-grid\_\-spline} (double z0)\label{classGrid1D_a27dd26c4364b92251f74be396842e50}
+
+\item 
+void \textbf{regrid} (double diff, double beg)\label{classGrid1D_4dd8a61011ad802c74d9c28b51091eed}
+
+\item 
+int \textbf{get\_\-size} ()\label{classGrid1D_30164cc2b8104ff319036a5db0e914d6}
+
+\item 
+double \textbf{get\_\-dz} ()\label{classGrid1D_01b2cc87826dfbf9dcf5b5fdbb235dc2}
+
+\item 
+double \textbf{get\_\-begin} ()\label{classGrid1D_8feb2b0035d8e6e17f72fc369bef0d7b}
+
+\item 
+double \textbf{get\_\-max\_\-abs} ()\label{classGrid1D_2a4974859d82db4e4866bb280a403428}
+
+\item 
+double \textbf{Field2Pic} (double pic\_\-pos)\label{classGrid1D_8c09b92944163062fad02bf0c5520b8a}
+
+\item 
+double \textbf{Field2PicTSC} (double pic\_\-pos)\label{classGrid1D_ba02e24d27dbae1385d4b1556eef54ee}
+
+\item 
+void {\bf Pic2Field} (double pic\_\-quantity, double pic\_\-pos)\label{classGrid1D_2b13bcceb17b6b3ec3b3c268a4fb760b}
+
+\begin{CompactList}\small\item\em Interpolates \doxyref{PIC}{p.}{classPIC} particle to grid:. \item\end{CompactList}\item 
+void {\bf Pic2FieldTSC} (double pic\_\-quantity, double pic\_\-pos)\label{classGrid1D_e4de8aee8d576cd8e9b50a4104b3bd88}
+
+\begin{CompactList}\small\item\em Triangular shaped density cloud (TSC), see Hockney. \item\end{CompactList}\item 
+void \textbf{smooth} ()\label{classGrid1D_ebf893af8ac1e16445d7ca3dd708dc3a}
+
+\item 
+void \textbf{print} ()\label{classGrid1D_a0ea1a89a9005781b4f3d83672cc6984}
+
+\item 
+void \textbf{reset} ()\label{classGrid1D_1c90c77a9de03df57a8e5951fe6c5b00}
+
+\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+vektor \textbf{z}\label{classGrid1D_8a864d36abd9884c0118797c5f550ed7}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+One dimensional grid with periodic boundary conditions and interpolation (linear, spline) routines for \doxyref{PIC}{p.}{classPIC} codes 
+
+Definition at line 6 of file Grid.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Grid.h\item 
+Grid.cpp\end{CompactItemize}
